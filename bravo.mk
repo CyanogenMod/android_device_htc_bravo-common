@@ -69,15 +69,6 @@ PRODUCT_COPY_FILES += \
     device/htc/bravo-common/nf_conntrack_h323.ko:system/lib/modules/nf_conntrack_h323.ko \
     device/htc/bravo-common/xfrm_ipcomp.ko:system/lib/modules/xfrm_ipcomp.ko \
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/htc/bravo-common/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
-
 $(call inherit-product-if-exists, vendor/htc/bravo-common/bravo-vendor.mk)
 
 # stuff common to all HTC phones
