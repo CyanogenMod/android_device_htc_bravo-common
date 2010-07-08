@@ -53,17 +53,16 @@ BOARD_EGL_CFG := device/htc/bravo-common/egl.cfg
 
 # # cat /proc/mtd
 # dev:    size   erasesize  name
-# mtd0: 000e0000 00020000 "misc"
+# mtd0: 000a0000 00020000 "misc"
 # mtd1: 00500000 00020000 "recovery"
 # mtd2: 00280000 00020000 "boot"
-# mtd3: 07800000 00020000 "system"
-# mtd4: 07800000 00020000 "cache"
-# mtd5: 0c440000 00020000 "userdata"
-# mtd6: 00200000 00020000 "crashdata"
+# mtd3: 0fa00000 00020000 "system"
+# mtd4: 02800000 00020000 "cache"
+# mtd5: 093a0000 00020000 "userdata"
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00280000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00500000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x08400000   # limited so we enforce room to grow
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x0c440000
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x093a0000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_RECOVERY_UI_LIB := librecovery_ui_bravo librecovery_ui_htc
