@@ -51,26 +51,32 @@ PRODUCT_COPY_FILES += \
 
 
 PRODUCT_COPY_FILES += \
-    device/htc/bravo-common/bcm4329.ko:system/lib/modules/bcm4329.ko \
-    device/htc/bravo-common/nf_nat_h323.ko:system/lib/modules/nf_nat_h323.ko \
-    device/htc/bravo-common/tunnel4.ko:system/lib/modules/tunnel4.ko \
     device/htc/bravo-common/ah6.ko:system/lib/modules/ah6.ko \
+    device/htc/bravo-common/aufs.ko:system/lib/modules/aufs.ko \
+    device/htc/bravo-common/auth_rpcgss.ko:system/lib/modules/auth_rpcgss.ko \
+    device/htc/bravo-common/bcm4329.ko:system/lib/modules/bcm4329.ko \
+    device/htc/bravo-common/cifs.ko:system/lib/modules/cifs.ko \
     device/htc/bravo-common/esp6.ko:system/lib/modules/esp6.ko \
+    device/htc/bravo-common/exportfs.ko:system/lib/modules/exportfs.ko \
+    device/htc/bravo-common/fuse.ko:system/lib/modules/fuse.ko \
     device/htc/bravo-common/ip6_tunnel.ko:system/lib/modules/ip6_tunnel.ko \
     device/htc/bravo-common/ipcomp6.ko:system/lib/modules/ipcomp6.ko \
     device/htc/bravo-common/ipv6.ko:system/lib/modules/ipv6.ko \
+    device/htc/bravo-common/lockd.ko:system/lib/modules/lockd.ko \
     device/htc/bravo-common/mip6.ko:system/lib/modules/mip6.ko \
+    device/htc/bravo-common/nfs.ko:system/lib/modules/nfs.ko \
+    device/htc/bravo-common/nfs_acl.ko:system/lib/modules/nfs_acl.ko \
+    device/htc/bravo-common/nfsd.ko:system/lib/modules/nfsd.ko \
+    device/htc/bravo-common/rpcsec_gss_krb5.ko:system/lib/modules/rpcsec_gss_krb5.ko \
     device/htc/bravo-common/sit.ko:system/lib/modules/sit.ko \
+    device/htc/bravo-common/sunrpc.ko:system/lib/modules/sunrpc.ko \
     device/htc/bravo-common/tunnel6.ko:system/lib/modules/tunnel6.ko \
     device/htc/bravo-common/xfrm6_mode_beet.ko:system/lib/modules/xfrm6_mode_beet.ko \
     device/htc/bravo-common/xfrm6_mode_transport.ko:system/lib/modules/xfrm6_mode_transport.ko \
     device/htc/bravo-common/xfrm6_mode_tunnel.ko:system/lib/modules/xfrm6_mode_tunnel.ko \
-    device/htc/bravo-common/xfrm6_tunnel.ko:system/lib/modules/xfrm6_tunnel.ko \
-    device/htc/bravo-common/nf_conntrack_h323.ko:system/lib/modules/nf_conntrack_h323.ko \
-    device/htc/bravo-common/xfrm_ipcomp.ko:system/lib/modules/xfrm_ipcomp.ko \
+    device/htc/bravo-common/xfrm6_tunnel.ko:system/lib/modules/xfrm6_tunnel.ko
 
 $(call inherit-product-if-exists, vendor/htc/bravo-common/bravo-vendor.mk)
 
 # stuff common to all HTC phones
 $(call inherit-product, device/htc/common/common.mk)
-
