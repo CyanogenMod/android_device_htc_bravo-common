@@ -37,13 +37,6 @@ PRODUCT_PACKAGES := \
     lights.bravo \
     librs_jni
 
-#Fix ME
-# Use the htc binary sensor.bravo.so until we get a fix
-# as sometimes the opensource version report wrong speed
-# 
-#    sensors.bravo \
-#    
-
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -55,31 +48,46 @@ PRODUCT_COPY_FILES += \
     device/htc/bravo-common/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/htc/bravo-common/vold.fstab:system/etc/vold.fstab
 
-
 PRODUCT_COPY_FILES += \
-    device/htc/bravo-common/ah6.ko:system/lib/modules/ah6.ko \
-    device/htc/bravo-common/auth_rpcgss.ko:system/lib/modules/auth_rpcgss.ko \
-    device/htc/bravo-common/bcm4329.ko:system/lib/modules/bcm4329.ko \
-    device/htc/bravo-common/cifs.ko:system/lib/modules/cifs.ko \
-    device/htc/bravo-common/esp6.ko:system/lib/modules/esp6.ko \
-    device/htc/bravo-common/exportfs.ko:system/lib/modules/exportfs.ko \
-    device/htc/bravo-common/fuse.ko:system/lib/modules/fuse.ko \
-    device/htc/bravo-common/ip6_tunnel.ko:system/lib/modules/ip6_tunnel.ko \
-    device/htc/bravo-common/ipcomp6.ko:system/lib/modules/ipcomp6.ko \
-    device/htc/bravo-common/ipv6.ko:system/lib/modules/ipv6.ko \
-    device/htc/bravo-common/lockd.ko:system/lib/modules/lockd.ko \
-    device/htc/bravo-common/mip6.ko:system/lib/modules/mip6.ko \
-    device/htc/bravo-common/nfs.ko:system/lib/modules/nfs.ko \
-    device/htc/bravo-common/nfs_acl.ko:system/lib/modules/nfs_acl.ko \
-    device/htc/bravo-common/nfsd.ko:system/lib/modules/nfsd.ko \
-    device/htc/bravo-common/rpcsec_gss_krb5.ko:system/lib/modules/rpcsec_gss_krb5.ko \
-    device/htc/bravo-common/sit.ko:system/lib/modules/sit.ko \
-    device/htc/bravo-common/sunrpc.ko:system/lib/modules/sunrpc.ko \
-    device/htc/bravo-common/tunnel6.ko:system/lib/modules/tunnel6.ko \
-    device/htc/bravo-common/xfrm6_mode_beet.ko:system/lib/modules/xfrm6_mode_beet.ko \
-    device/htc/bravo-common/xfrm6_mode_transport.ko:system/lib/modules/xfrm6_mode_transport.ko \
-    device/htc/bravo-common/xfrm6_mode_tunnel.ko:system/lib/modules/xfrm6_mode_tunnel.ko \
-    device/htc/bravo-common/xfrm6_tunnel.ko:system/lib/modules/xfrm6_tunnel.ko
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/drivers/net/wireless/bcm4329/bcm4329.ko:system/lib/modules/bcm4329.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/modules.seriomap:system/lib/modules/2.6.32.9-cyanogenmod/modules.seriomap \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/modules.alias:system/lib/modules/2.6.32.9-cyanogenmod/modules.alias \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/drivers/net/wireless/bcm4329/bcm4329.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/drivers/net/wireless/bcm4329/bcm4329.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/net/sunrpc/auth_gss/rpcsec_gss_krb5.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/net/sunrpc/auth_gss/rpcsec_gss_krb5.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/net/sunrpc/auth_gss/auth_rpcgss.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/net/sunrpc/auth_gss/auth_rpcgss.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/net/sunrpc/sunrpc.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/net/sunrpc/sunrpc.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/net/ipv6/xfrm6_mode_beet.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/net/ipv6/xfrm6_mode_beet.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/net/ipv6/ipcomp6.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/net/ipv6/ipcomp6.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/net/ipv6/xfrm6_mode_tunnel.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/net/ipv6/xfrm6_mode_tunnel.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/net/ipv6/xfrm6_tunnel.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/net/ipv6/xfrm6_tunnel.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/net/ipv6/sit.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/net/ipv6/sit.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/net/ipv6/xfrm6_mode_transport.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/net/ipv6/xfrm6_mode_transport.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/net/ipv6/esp6.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/net/ipv6/esp6.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/net/ipv6/tunnel6.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/net/ipv6/tunnel6.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/net/ipv6/ip6_tunnel.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/net/ipv6/ip6_tunnel.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/net/ipv6/mip6.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/net/ipv6/mip6.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/net/ipv6/ipv6.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/net/ipv6/ipv6.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/net/ipv6/ah6.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/net/ipv6/ah6.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/fs/nfs/nfs.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/fs/nfs/nfs.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/fs/exportfs/exportfs.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/fs/exportfs/exportfs.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/fs/nfsd/nfsd.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/fs/nfsd/nfsd.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/fs/fuse/fuse.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/fs/fuse/fuse.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/fs/cifs/cifs.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/fs/cifs/cifs.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/fs/nfs_common/nfs_acl.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/fs/nfs_common/nfs_acl.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/kernel/fs/lockd/lockd.ko:system/lib/modules/2.6.32.9-cyanogenmod/kernel/fs/lockd/lockd.ko \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/modules.ieee1394map:system/lib/modules/2.6.32.9-cyanogenmod/modules.ieee1394map \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/modules.order:system/lib/modules/2.6.32.9-cyanogenmod/modules.order \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/modules.ofmap:system/lib/modules/2.6.32.9-cyanogenmod/modules.ofmap \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/modules.alias.bin:system/lib/modules/2.6.32.9-cyanogenmod/modules.alias.bin \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/modules.ccwmap:system/lib/modules/2.6.32.9-cyanogenmod/modules.ccwmap \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/modules.usbmap:system/lib/modules/2.6.32.9-cyanogenmod/modules.usbmap \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/modules.isapnpmap:system/lib/modules/2.6.32.9-cyanogenmod/modules.isapnpmap \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/modules.symbols:system/lib/modules/2.6.32.9-cyanogenmod/modules.symbols \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/modules.dep.bin:system/lib/modules/2.6.32.9-cyanogenmod/modules.dep.bin \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/modules.dep:system/lib/modules/2.6.32.9-cyanogenmod/modules.dep \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/modules.symbols.bin:system/lib/modules/2.6.32.9-cyanogenmod/modules.symbols.bin \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/modules.pcimap:system/lib/modules/2.6.32.9-cyanogenmod/modules.pcimap \
+    device/htc/bravo-common/2.6.32.9-cyanogenmod/modules.inputmap:system/lib/modules/2.6.32.9-cyanogenmod/modules.inputmap
 
 $(call inherit-product-if-exists, vendor/htc/bravo-common/bravo-vendor.mk)
 
