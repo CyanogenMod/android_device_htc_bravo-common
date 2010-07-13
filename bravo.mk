@@ -34,9 +34,15 @@ PRODUCT_COPY_FILES += \
     device/htc/bravo-common/media_profiles.xml:system/etc/media_profiles.xml
 
 PRODUCT_PACKAGES := \
-    sensors.bravo \
     lights.bravo \
     librs_jni
+
+#Fix ME
+# Use the htc binary sensor.bravo.so until we get a fix
+# as sometimes the opensource version report wrong speed
+# 
+#    sensors.bravo \
+#    
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
