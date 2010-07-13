@@ -52,7 +52,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     device/htc/bravo-common/ah6.ko:system/lib/modules/ah6.ko \
-    device/htc/bravo-common/aufs.ko:system/lib/modules/aufs.ko \
     device/htc/bravo-common/auth_rpcgss.ko:system/lib/modules/auth_rpcgss.ko \
     device/htc/bravo-common/bcm4329.ko:system/lib/modules/bcm4329.ko \
     device/htc/bravo-common/cifs.ko:system/lib/modules/cifs.ko \
