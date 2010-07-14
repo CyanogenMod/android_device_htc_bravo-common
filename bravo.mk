@@ -34,6 +34,7 @@ PRODUCT_COPY_FILES += \
     device/htc/bravo-common/media_profiles.xml:system/etc/media_profiles.xml
 
 PRODUCT_PACKAGES := \
+    sensors.bravo \
     lights.bravo \
     librs_jni
 
